@@ -5,8 +5,8 @@ module.exports = async (context, {owner, repo}) => {
     context.github.pullRequests.getAll({
       owner,
       repo,
-      state: 'all',
-      per_page: 100
+      state: 'closed',
+      per_page: 25
     }),
     res => res.data
   )
