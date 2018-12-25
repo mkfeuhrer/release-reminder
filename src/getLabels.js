@@ -4,10 +4,9 @@ module.exports = async (context, {owner, repo, number}) => {
       context.github.issues.listLabelsOnIssue({
         owner,
         repo,
-        number,
-        per_page: 100
+        number
       }),
       res => res.data
     )
     return labels
-  }
+}

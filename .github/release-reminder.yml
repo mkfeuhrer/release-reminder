@@ -1,0 +1,4 @@
+# Configuration for Release Reminder
+latestRelease: $STABLE_VERSION_NUMBER
+latestReleaseNumber: $STABLE_VERSION
+releaseInterval: $RELEASE_INTERVAL
