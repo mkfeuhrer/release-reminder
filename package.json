@@ -20,10 +20,10 @@
     "test:watch": "jest --watch --notify --notifyMode=change --coverage"
   },
   "dependencies": {
+    "@bcgov/probot-scheduler": "^1.2.1",
     "compare-versions": "^3.4.0",
     "probot": "^7.2.0",
-    "probot-config": "^0.1.0",
-    "probot-scheduler": "^1.0.2"
+    "probot-config": "^0.1.0"
   },
   "devDependencies": {
     "jest": "^22.4.3",
