@@ -1,17 +1,21 @@
 const defaultConfig = require('./defaultConfig')
+const moment = require('moment')
 
 module.exports = (config) => {
   if (config === null) {
     config = defaultConfig
   } else {
-    if (!config.hasOwnProperty('publishDay')) {
-      config.publishDay = 0
+    if (!config.hasOwnProperty('releaseInterval')) {
+      config.releaseInterval = 28
     }
-    if (!config.hasOwnProperty('canPublishPullRequests')) {
-      config.canPublishPullRequests = true
+    if (!config.hasOwnProperty('latestRelease')) {
+      config.latestRelease = "v1.0"
     }
-    if (!config.hasOwnProperty('canPublishReleases')) {
-      config.canPublishReleases = true
+    if (!config.hasOwnProperty('latestReleaseNumber')) {
+      config.latestReleaseNumber = 1.0
+    }
+    if (!config.hasOwnProperty('creationTime')) {
+      config.creationTime = moment();
     }
   }
 

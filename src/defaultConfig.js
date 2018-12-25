@@ -1,5 +1,7 @@
 module.exports = {
-    publishDay: 0,
-    canPublishPullRequests: true,
-    canPublishReleases: true
-}
+    // releaseInterval should be in number of days
+    releaseInterval: 0,
+    latestRelease: "v1.0",
+    latestReleaseNumber: 1.0,
+    creationTime: ""
+  }
