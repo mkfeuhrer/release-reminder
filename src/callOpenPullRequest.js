@@ -4,7 +4,7 @@ module.exports = async (context, {owner, repo, openPullRequests, result}) => {
   const getLabels = require('./getLabels')
   console.log("Number of OpenPullRequests :" + openPullRequests.length)
   
-  for( var i = 0;i < openPullRequests.length;i++) {
+  for(let i = 0;i < openPullRequests.length;i++) {
       
       // use github.issues.createComment endpoint for commenting on a PR
       // https://octokit.github.io/rest.js/#api-Issues-createComment
@@ -24,8 +24,8 @@ module.exports = async (context, {owner, repo, openPullRequests, result}) => {
       }
       else {
         // Add Labels if not added till now
-        for( var i = 0;i < listLabels.length;i++) {
-          for( var j = 0;j < labelsToAdd.length;j++){
+        for(let i = 0;i < listLabels.length;i++) {
+          for(let j = 0;j < labelsToAdd.length;j++){
             if(listLabels[i].name != labelsToAdd[j])
               result.push(context.github.issues.addLabels(context.issue({number: number,labels: labelsToAdd})))
           }
